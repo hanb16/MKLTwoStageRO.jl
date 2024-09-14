@@ -1,7 +1,7 @@
 name = "MKLTwoStageRO"
 uuid = "93898484-63e5-4ba9-b4a0-175f12ac17f3"
 authors = ["hanb16 <hanb16@tsinghua.org.cn>"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 CDDLib = "3391f64e-dcde-5f30-b752-e11513730f60"
