@@ -1,7 +1,7 @@
 module MKLTwoStageRO
 
 using Reexport
-using JuMP: @constraint, @expression, @objective, @variable, ALMOST_LOCALLY_SOLVED, ITERATION_LIMIT, LOCALLY_SOLVED, Model, NORM_LIMIT, OPTIMAL, all_variables, delete, dual, name, num_variables, object_dictionary, objective_value, optimize!, set_normalized_rhs, set_optimizer, set_optimizer_attributes, set_silent, termination_status, unregister, value, NUMERICAL_ERROR
+using JuMP: @constraint, @expression, @objective, @variable, ALMOST_LOCALLY_SOLVED, ITERATION_LIMIT, LOCALLY_SOLVED, Model, NORM_LIMIT, NUMERICAL_ERROR, OPTIMAL, all_variables, delete, dual, is_solved_and_feasible, name, num_variables, object_dictionary, objective_value, optimize!, set_normalized_rhs, set_optimizer, set_optimizer_attributes, set_silent, termination_status, unregister, value
 @reexport using Polyhedra
 @reexport using CDDLib
 using HiGHS

@@ -233,6 +233,9 @@ function SolveTwoStageRO_MKLCCG(
 
         # --- Solve the Master Problem ---
         optimize!(MP)
+        if ~is_solved_and_feasible(MP)
+            error("The Master Problem is not solved or it's infeasible!")
+        end
         x_star = value.(x); θ_star = value.(θ)
         LB = a' * x_star + θ_star
         # --------------------------------
@@ -417,6 +420,9 @@ function SolveTwoStageRO_MKLCCG(
 
         # --- Solve the Master Problem ---
         optimize!(MP)
+        if ~is_solved_and_feasible(MP)
+            error("The Master Problem is not solved or it's infeasible!")
+        end
         x_star = value.(x); θ_star = value.(θ)
         LB = a' * x_star + θ_star
         # --------------------------------
