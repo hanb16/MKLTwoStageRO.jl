@@ -259,7 +259,7 @@ function SolveTwoStageRO_MKLCCG(
         optimize!(SP_fea) # Feasibility Check
         if termination_status(SP_fea) == OPTIMAL
             if value(γ_fea) >= ϵ # x_star is infeasible.
-                UB = +Inf
+                UB = min(UB, +Inf)
                 u_star = value.(u_fea)
             else # x_star is feasible
                 # ----- Update SP_opt ------
@@ -270,7 +270,7 @@ function SolveTwoStageRO_MKLCCG(
                 # --------------------------
                 optimize!(SP_opt)
                 if termination_status(SP_opt) == OPTIMAL
-                    UB = a' * x_star + objective_value(SP_opt)
+                    UB = min(UB, a' * x_star + objective_value(SP_opt))
                     u_star = value.(u_opt)
                 else
                     error("Optimality Oracle Exception!")
@@ -446,7 +446,7 @@ function SolveTwoStageRO_MKLCCG(
         optimize!(SP_fea) # Feasibility Check
         if termination_status(SP_fea) == OPTIMAL
             if value(γ_fea) >= ϵ # x_star is infeasible.
-                UB = +Inf
+                UB = min(UB, +Inf)
                 u_star = value.(u_fea)
             else # x_star is feasible
                 # ----- Update SP_opt ------
@@ -457,7 +457,7 @@ function SolveTwoStageRO_MKLCCG(
                 # --------------------------
                 optimize!(SP_opt)
                 if termination_status(SP_opt) == OPTIMAL
-                    UB = a' * x_star + objective_value(SP_opt)
+                    UB = min(UB, a' * x_star + objective_value(SP_opt))
                     u_star = value.(u_opt)
                 else
                     error("Optimality Oracle Exception!")
