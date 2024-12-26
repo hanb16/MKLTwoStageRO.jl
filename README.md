@@ -223,17 +223,14 @@ x_star, RPobjv = recourse(û)
 
 
 ## Citing
-If you find `MKLTwoStageRO.jl` useful, we kindly request that you cite this [repository](https://github.com/hanb16/MKLTwoStageRO.jl) and the following [paper](https://doi.org/10.1016/j.ejor.2020.11.027):
+If you find `MKLTwoStageRO.jl` useful, we kindly request that you cite this [repository](https://github.com/hanb16/MKLTwoStageRO.jl) and the following [paper](https://optimization-online.org/?p=28865):
 ``` bibtex
-@article{han2021multiple,
-  title={Multiple kernel learning-aided robust optimization: Learning algorithm, computational tractability, and usage in multi-stage decision-making},
-  author={Han, Biao and Shang, Chao and Huang, Dexian},
-  journal={European Journal of Operational Research},
-  volume={292},
-  number={3},
-  pages={1004--1018},
-  year={2021},
-  publisher={Elsevier}
+@article{Han2024Multiple,
+  title={Multiple kernel learning-aided column-and-constraint generation method},
+  author={Han, Biao},
+  year={2024},
+  publisher={optimization-online.org},
+  url={https://optimization-online.org/?p=28865},
 }
 ```
 
@@ -243,7 +240,7 @@ By default, this package implicitly uses [`KernelFunctions.jl`](https://github.c
 
 ## References
 1. <span id="R1">Han, B., Shang, C., & Huang, D. (2021). Multiple kernel learning-aided robust optimization: Learning algorithm, computational tractability, and usage in multi-stage decision-making. European Journal of Operational Research, 292(3), 1004-1018.
-2. <span id="R2">Han, B. (2024). Multiple kernel learning-aided column-and-constraint generation method. 
+2. <span id="R2">Han, B. (2024). Multiple kernel learning-aided column-and-constraint generation method. available on Optimization-Online. org. https://optimization-online.org/?p=28865
 3. <span id="R3">Bertsimas, D., & Shtern, S. (2018). A scalable algorithm for two-stage adaptive linear optimization. arXiv preprint arXiv:1807.02812.
 4. <span id="R4">Zeng, B., & Zhao, L. (2013). Solving two-stage robust optimization problems using a column-and-constraint generation method. Operations Research Letters, 41(5), 457-461.
 5. <span id="R5">Zhao, L., & Zeng, B. (2012). An exact algorithm for two-stage robust optimization with mixed integer recourse problems. submitted, available on Optimization-Online. org.
